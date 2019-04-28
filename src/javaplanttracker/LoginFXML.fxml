@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CEF09D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaplanttracker.LoginFXMLController">
+   <children>
+      <AnchorPane layoutX="33.0" layoutY="38.0" prefHeight="325.0" prefWidth="251.0" style="-fx-background-radius: 15; -fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="22.0" layoutY="24.0" text="Log in" textFill="#476c5e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="userTF" focusColor="#476c5e" layoutX="32.0" layoutY="95.0" promptText="Username" unFocusColor="#476c5e" />
+            <JFXPasswordField fx:id="passwordTF" focusColor="#476c5e" layoutX="32.0" layoutY="163.0" promptText="Password" unFocusColor="#476c5e" />
+            <JFXButton layoutX="32.0" layoutY="266.0" onAction="#logInAct" style="-fx-background-color: #476C5E;" text="Enter" textFill="WHITE" />
+         </children>
+         <effect>
+            <DropShadow height="6.17" radius="2.585" width="6.17" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="317.0" layoutY="38.0" prefHeight="325.0" prefWidth="251.0" style="-fx-background-radius: 15; -fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="29.0" layoutY="27.0" text="Sign up" textFill="#476c5e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="newUserTF" focusColor="#476c5e" layoutX="42.0" layoutY="95.0" promptText="Username" unFocusColor="#476c5e" />
+            <JFXPasswordField fx:id="newPasswordTF" focusColor="#476c5e" layoutX="42.0" layoutY="163.0" promptText="Password" unFocusColor="#476c5e" />
+            <JFXButton layoutX="42.0" layoutY="265.0" onAction="#signUpAct" style="-fx-background-color: #476C5E;" text="Enter" textFill="WHITE" />
+         </children>
+         <effect>
+            <DropShadow height="6.17" radius="2.585" width="6.17" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaplanttracker.FXMLDocumentController">
+   <children>
+      <Pane prefHeight="158.0" prefWidth="888.0" style="-fx-background-color: #B1E001;">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/D:/Documents/GitHub/PlantTracker/src/images/fiber.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="81.0" layoutY="21.0" opacity="0.8" prefHeight="27.0" prefWidth="105.0" text="Username" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="48.0" opacity="0.8" prefHeight="17.0" prefWidth="153.0" text="Name and surnames" textFill="WHITE" />
+            <Label layoutX="47.0" layoutY="112.0" prefHeight="46.0" prefWidth="190.0" text="Plants" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="284.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D; -fx-background-radius: 15;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="13.0" radius="6.0" width="13.0" />
+         </effect>
+         <children>
+            <ImageView fitHeight="54.0" fitWidth="53.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sun.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="184.0" layoutY="460.0" prefHeight="39.0" prefWidth="67.0" style="-fx-background-color: #476C5E;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="67.0" layoutY="18.0" prefHeight="46.0" prefWidth="168.0" text="Weather" textFill="#476c5e">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <JFXDatePicker defaultColor="#476b5d" layoutX="47.0" layoutY="89.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="583.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D; -fx-background-radius: 15;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="13.0" radius="6.0" width="13.0" />
+         </effect>
+         <children>
+            <ImageView fitHeight="54.0" fitWidth="53.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/watering.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="184.0" layoutY="460.0" prefHeight="39.0" prefWidth="67.0" style="-fx-background-color: #476C5E;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="67.0" layoutY="18.0" prefHeight="46.0" prefWidth="168.0" text="Water" textFill="#476c5e">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <JFXDatePicker defaultColor="#476b5d" layoutX="47.0" layoutY="92.0" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="39.0" layoutY="577.0" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #476C5E;" text="Exit" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXListView layoutX="39.0" layoutY="173.0" prefHeight="351.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
