@@ -34,7 +34,7 @@
             </Label>
          </children>
       </Pane>
-      <AnchorPane layoutX="284.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D; -fx-background-radius: 15;">
+      <AnchorPane layoutX="284.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D;">
          <effect>
             <DropShadow blurType="GAUSSIAN" height="13.0" radius="6.0" width="13.0" />
          </effect>
@@ -60,7 +60,7 @@
             <JFXDatePicker defaultColor="#476b5d" layoutX="47.0" layoutY="89.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="583.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D; -fx-background-radius: 15;">
+      <AnchorPane layoutX="583.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D;">
          <effect>
             <DropShadow blurType="GAUSSIAN" height="13.0" radius="6.0" width="13.0" />
          </effect>

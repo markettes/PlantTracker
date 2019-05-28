@@ -6,39 +6,53 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CEF09D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaplanttracker.LoginFXMLController">
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CEF09D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaplanttracker.LoginFXMLController">
    <children>
-      <AnchorPane layoutX="33.0" layoutY="38.0" prefHeight="325.0" prefWidth="251.0" style="-fx-background-radius: 15; -fx-background-color: #ffffff;">
+      <GridPane fx:id="gridPane" prefHeight="400.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
          <children>
-            <Label layoutX="22.0" layoutY="24.0" text="Log in" textFill="#476c5e">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="userTF" focusColor="#476c5e" layoutX="32.0" layoutY="95.0" promptText="Username" unFocusColor="#476c5e" />
-            <JFXPasswordField fx:id="passwordTF" focusColor="#476c5e" layoutX="32.0" layoutY="163.0" promptText="Password" unFocusColor="#476c5e" />
-            <JFXButton layoutX="32.0" layoutY="266.0" onAction="#logInAct" style="-fx-background-color: #476C5E;" text="Enter" textFill="WHITE" />
+            <AnchorPane maxHeight="330.0" maxWidth="250.0" prefHeight="325.0" prefWidth="251.0" style="-fx-background-radius: 15; -fx-background-color: #ffffff;" GridPane.halignment="CENTER">
+               <children>
+                  <Label layoutX="22.0" layoutY="24.0" text="Log in" textFill="#476c5e">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="userTF" focusColor="#476c5e" layoutX="32.0" layoutY="95.0" promptText="Username" unFocusColor="#476c5e" />
+                  <JFXPasswordField fx:id="passwordTF" focusColor="#476c5e" layoutX="32.0" layoutY="163.0" promptText="Password" unFocusColor="#476c5e" />
+                  <JFXButton layoutX="32.0" layoutY="266.0" onAction="#logInAct" style="-fx-background-color: #476C5E;" text="Enter" textFill="WHITE" />
+               </children>
+               <effect>
+                  <DropShadow height="6.17" radius="2.585" width="6.17" />
+               </effect>
+            </AnchorPane>
+            <AnchorPane maxHeight="330.0" maxWidth="250.0" prefHeight="325.0" prefWidth="200.0" style="-fx-background-radius: 15; -fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <children>
+                  <Label layoutX="29.0" layoutY="27.0" text="Sign up" textFill="#476c5e">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="newUserTF" focusColor="#476c5e" layoutX="42.0" layoutY="95.0" promptText="Username" unFocusColor="#476c5e" />
+                  <JFXPasswordField fx:id="newPasswordTF" focusColor="#476c5e" layoutX="42.0" layoutY="163.0" promptText="Password" unFocusColor="#476c5e" />
+                  <JFXButton layoutX="42.0" layoutY="265.0" onAction="#signUpAct" style="-fx-background-color: #476C5E;" text="Enter" textFill="WHITE" />
+               </children>
+               <effect>
+                  <DropShadow height="6.17" radius="2.585" width="6.17" />
+               </effect>
+            </AnchorPane>
          </children>
-         <effect>
-            <DropShadow height="6.17" radius="2.585" width="6.17" />
-         </effect>
-      </AnchorPane>
-      <AnchorPane layoutX="317.0" layoutY="38.0" prefHeight="325.0" prefWidth="251.0" style="-fx-background-radius: 15; -fx-background-color: #ffffff;">
-         <children>
-            <Label layoutX="29.0" layoutY="27.0" text="Sign up" textFill="#476c5e">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="newUserTF" focusColor="#476c5e" layoutX="42.0" layoutY="95.0" promptText="Username" unFocusColor="#476c5e" />
-            <JFXPasswordField fx:id="newPasswordTF" focusColor="#476c5e" layoutX="42.0" layoutY="163.0" promptText="Password" unFocusColor="#476c5e" />
-            <JFXButton layoutX="42.0" layoutY="265.0" onAction="#signUpAct" style="-fx-background-color: #476C5E;" text="Enter" textFill="WHITE" />
-         </children>
-         <effect>
-            <DropShadow height="6.17" radius="2.585" width="6.17" />
-         </effect>
-      </AnchorPane>
+      </GridPane>
    </children>
 </AnchorPane>
