@@ -34,7 +34,7 @@ import javafx.stage.Stage;
  */
 public class LoginFXMLController implements Initializable {
 
-    Glow bloom = new Glow();
+    private final Glow bloom = new Glow();
     @FXML
     private JFXTextField userTF;
     @FXML
@@ -64,10 +64,11 @@ public class LoginFXMLController implements Initializable {
 
     @FXML
     private void logInAct(ActionEvent event) {
-        Connection conn = null;
+        Connection conn;
         String sql = "SELECT * from USERS where USERNAME=? and PASSWORDS=?";
-        PreparedStatement pst = null;
-        ResultSet rs = null;
+        PreparedStatement pst;
+        ResultSet rs;
+        
 
         try {
 
@@ -109,7 +110,7 @@ public class LoginFXMLController implements Initializable {
 
         try {
 
-            if (newUserTF.getText().equalsIgnoreCase("") || newPasswordTF.getText().equals("")) {
+            if (newUserTF.getText().equals("") || newPasswordTF.getText().equals("")) {
                 throw new Exception();
             }
             Class.forName("org.apache.derby.jdbc.ClientDriver");

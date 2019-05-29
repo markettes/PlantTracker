@@ -28,7 +28,7 @@ public class JavaPlantTracker extends Application {
         // ICON & TITLE
         stage.getIcons().add(new Image("/images/icon.png"));
         stage.setTitle("PlantTracker 0.1(ALPHA)");
-        
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
         

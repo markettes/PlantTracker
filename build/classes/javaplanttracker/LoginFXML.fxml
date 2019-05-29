@@ -22,7 +22,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane maxHeight="330.0" maxWidth="250.0" prefHeight="325.0" prefWidth="251.0" style="-fx-background-radius: 15; -fx-background-color: #ffffff;" GridPane.halignment="CENTER">
+            <AnchorPane maxHeight="330.0" maxWidth="250.0" prefHeight="325.0" prefWidth="251.0" style="-fx-background-color: #ffffff;" GridPane.halignment="CENTER">
                <children>
                   <Label layoutX="22.0" layoutY="24.0" text="Log in" textFill="#476c5e">
                      <font>
@@ -37,7 +37,7 @@
                   <DropShadow height="6.17" radius="2.585" width="6.17" />
                </effect>
             </AnchorPane>
-            <AnchorPane maxHeight="330.0" maxWidth="250.0" prefHeight="325.0" prefWidth="200.0" style="-fx-background-radius: 15; -fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <AnchorPane maxHeight="330.0" maxWidth="250.0" prefHeight="325.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                <children>
                   <Label layoutX="29.0" layoutY="27.0" text="Sign up" textFill="#476c5e">
                      <font>
