@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaplanttracker.FXMLDocumentController">
+<AnchorPane id="AnchorPane" minHeight="654.0" minWidth="887.0" prefHeight="654.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaplanttracker.FXMLDocumentController">
    <children>
       <Pane prefHeight="158.0" prefWidth="888.0" style="-fx-background-color: #B1E001;">
          <children>
@@ -21,12 +21,11 @@
                   <Image url="file:/D:/Documents/GitHub/PlantTracker/src/images/fiber.png" />
                </image>
             </ImageView>
-            <Label layoutX="81.0" layoutY="21.0" opacity="0.8" prefHeight="27.0" prefWidth="105.0" text="Username" textAlignment="JUSTIFY" textFill="WHITE">
+            <Label fx:id="userLabel" layoutX="81.0" layoutY="34.0" opacity="0.8" prefHeight="27.0" prefWidth="302.0" text="Username" textAlignment="JUSTIFY" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="81.0" layoutY="48.0" opacity="0.8" prefHeight="17.0" prefWidth="153.0" text="Name and surnames" textFill="WHITE" />
             <Label layoutX="47.0" layoutY="112.0" prefHeight="46.0" prefWidth="190.0" text="Plants" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />

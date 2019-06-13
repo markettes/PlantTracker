@@ -18,10 +18,16 @@ import javafx.scene.control.Label;
  * @author Marcos
  */
 public class FXMLDocumentController implements Initializable {    
+
+    @FXML
+    private Label userLabel;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
     }    
     
+    public void setUserLabel(String name){
+        userLabel.setText("User: " + name);
+    }
 }

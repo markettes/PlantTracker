@@ -17,9 +17,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import javafx.scene.effect.Glow;
 import javafx.scene.image.Image;
@@ -48,6 +48,7 @@ public class LoginFXMLController implements Initializable {
     private GridPane gridPane;
     @FXML
     private JFXPasswordField newPasswordTF;
+    
 
     /**
      * Initializes the controller class.
@@ -68,7 +69,6 @@ public class LoginFXMLController implements Initializable {
         String sql = "SELECT * from USERS where USERNAME=? and PASSWORDS=?";
         PreparedStatement pst;
         ResultSet rs;
-        
 
         try {
 
@@ -88,15 +88,27 @@ public class LoginFXMLController implements Initializable {
                 //If everything works fine:
                 FXMLLoader miCargador = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
                 AnchorPane root = (AnchorPane) miCargador.load();
+                
+                    //Paso de Datos
+                FXMLDocumentController controladorUserLabel = miCargador.<FXMLDocumentController>getController();
+                controladorUserLabel.setUserLabel(userTF.getText());
+                
                 Scene scene = new Scene(root);
                 Stage stage = new Stage();
-                // ICON & TITLE
+                // Stage Properties
                 stage.getIcons().add(new Image("/images/icon.png"));
                 stage.setTitle("PlantTracker 0.1(ALPHA)");
+                stage.setMinWidth(900);
+                stage.setMinHeight(654);
+                stage.setMaximized(true);
+                ((Node) (event.getSource())).getScene().getWindow().hide();
+
                 //START
                 stage.setScene(scene);
                 stage.show();
-            } else{ throw new Exception();}
+            } else {
+                throw new Exception();
+            }
 
         } catch (Exception e) {
             System.err.println(e);
@@ -121,12 +133,22 @@ public class LoginFXMLController implements Initializable {
             //If everything works fine:
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
             AnchorPane root = (AnchorPane) miCargador.load();
+            
+                    //Paso de Datos
+                FXMLDocumentController controladorUserLabel = miCargador.<FXMLDocumentController>getController();
+                controladorUserLabel.setUserLabel(newUserTF.getText());
+                
             Scene scene = new Scene(root);
             Stage stage = new Stage();
-            // ICON & TITLE
+            // Stage Properties
             stage.getIcons().add(new Image("/images/icon.png"));
             stage.setTitle("PlantTracker 0.1(ALPHA)");
+            stage.setMinHeight(655);
+            stage.setMinWidth(887);
+            stage.setMaximized(true);
+            ((Node) (event.getSource())).getScene().getWindow().hide();
 
+            //START
             stage.setScene(scene);
             stage.show();
 
@@ -154,5 +176,4 @@ public class LoginFXMLController implements Initializable {
             }
         }
     }
-
 }
