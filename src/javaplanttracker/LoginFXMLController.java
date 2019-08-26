@@ -48,7 +48,6 @@ public class LoginFXMLController implements Initializable {
     private GridPane gridPane;
     @FXML
     private JFXPasswordField newPasswordTF;
-    
 
     /**
      * Initializes the controller class.
@@ -63,6 +62,10 @@ public class LoginFXMLController implements Initializable {
         gridPane.prefWidthProperty().bind(anchorPane.widthProperty());
     }
 
+    
+    /*
+    LOG-IN
+    */
     @FXML
     private void logInAct(ActionEvent event) {
         Connection conn;
@@ -88,11 +91,11 @@ public class LoginFXMLController implements Initializable {
                 //If everything works fine:
                 FXMLLoader miCargador = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
                 AnchorPane root = (AnchorPane) miCargador.load();
-                
-                    //Paso de Datos
+
+                //Paso de Datos
                 FXMLDocumentController controladorUserLabel = miCargador.<FXMLDocumentController>getController();
                 controladorUserLabel.setUserLabel(userTF.getText());
-                
+
                 Scene scene = new Scene(root);
                 Stage stage = new Stage();
                 // Stage Properties
@@ -100,7 +103,7 @@ public class LoginFXMLController implements Initializable {
                 stage.setTitle("PlantTracker 0.1(ALPHA)");
                 stage.setMinWidth(900);
                 stage.setMinHeight(654);
-                stage.setMaximized(true);
+                stage.setResizable(false);
                 ((Node) (event.getSource())).getScene().getWindow().hide();
 
                 //START
@@ -115,6 +118,11 @@ public class LoginFXMLController implements Initializable {
         }
     }
 
+    
+    
+    /*
+    SIGN-UP
+    */
     @FXML
     private void signUpAct(ActionEvent event) {
 
@@ -133,11 +141,11 @@ public class LoginFXMLController implements Initializable {
             //If everything works fine:
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
             AnchorPane root = (AnchorPane) miCargador.load();
-            
-                    //Paso de Datos
-                FXMLDocumentController controladorUserLabel = miCargador.<FXMLDocumentController>getController();
-                controladorUserLabel.setUserLabel(newUserTF.getText());
-                
+
+            //Paso de Datos
+            FXMLDocumentController controladorUserLabel = miCargador.<FXMLDocumentController>getController();
+            controladorUserLabel.setUserLabel(newUserTF.getText());
+
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             // Stage Properties
@@ -145,7 +153,7 @@ public class LoginFXMLController implements Initializable {
             stage.setTitle("PlantTracker 0.1(ALPHA)");
             stage.setMinHeight(655);
             stage.setMinWidth(887);
-            stage.setMaximized(true);
+            stage.setResizable(false);
             ((Node) (event.getSource())).getScene().getWindow().hide();
 
             //START

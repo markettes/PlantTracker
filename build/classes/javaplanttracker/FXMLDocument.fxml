@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="654.0" minWidth="887.0" prefHeight="654.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaplanttracker.FXMLDocumentController">
+<AnchorPane id="AnchorPane" minHeight="654.0" minWidth="882.0" prefHeight="696.0" prefWidth="882.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaplanttracker.FXMLDocumentController">
    <children>
-      <Pane prefHeight="158.0" prefWidth="888.0" style="-fx-background-color: #B1E001;">
+      <Pane prefHeight="158.0" prefWidth="882.0" style="-fx-background-color: #B1E001;">
          <children>
             <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -26,14 +26,12 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="47.0" layoutY="112.0" prefHeight="46.0" prefWidth="190.0" text="Plants" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
          </children>
+         <effect>
+            <DropShadow />
+         </effect>
       </Pane>
-      <AnchorPane layoutX="284.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D;">
+      <AnchorPane layoutX="288.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D;">
          <effect>
             <DropShadow blurType="GAUSSIAN" height="13.0" radius="6.0" width="13.0" />
          </effect>
@@ -56,10 +54,9 @@
                   <Insets left="15.0" />
                </padding>
             </Label>
-            <JFXDatePicker defaultColor="#476b5d" layoutX="47.0" layoutY="89.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="583.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D;">
+      <AnchorPane layoutX="581.0" layoutY="103.0" prefHeight="513.0" prefWidth="265.0" style="-fx-background-color: #CEF09D;">
          <effect>
             <DropShadow blurType="GAUSSIAN" height="13.0" radius="6.0" width="13.0" />
          </effect>
@@ -85,11 +82,21 @@
             <JFXDatePicker defaultColor="#476b5d" layoutX="47.0" layoutY="92.0" />
          </children>
       </AnchorPane>
-      <JFXButton layoutX="39.0" layoutY="577.0" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #476C5E;" text="Exit" textFill="WHITE">
+      <JFXButton layoutX="40.0" layoutY="628.0" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #476C5E;" text="Exit" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXListView layoutX="39.0" layoutY="173.0" prefHeight="351.0" prefWidth="200.0" />
+      <JFXListView layoutX="40.0" layoutY="228.0" prefHeight="351.0" prefWidth="200.0" />
+      <Label layoutX="40.0" layoutY="173.0" prefHeight="46.0" prefWidth="190.0" text="Plants" textFill="#476c5e">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="201.0" layoutY="177.0" onAction="#addPlantAct" prefHeight="39.0" prefWidth="39.0" style="-fx-background-color: #476C5E;" text="+" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
