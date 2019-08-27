@@ -5,10 +5,24 @@
  */
 package classes;
 
+import java.io.File;
+
 /**
  *
  * @author Marcos
  */
 public class Plant {
+    String owner;
+    String type;
+    String site;
+    int watering;
+    File pict;
     
+    public Plant(String ow, String ty, String si, int wat, File pic){
+        owner = ow;
+        type = ty;
+        site = si;
+        watering = wat;
+        pict = pic;
+    }
 }

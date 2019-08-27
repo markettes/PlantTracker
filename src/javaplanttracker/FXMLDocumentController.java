@@ -5,15 +5,20 @@
  */
 package javaplanttracker;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  *
@@ -26,7 +31,7 @@ public class FXMLDocumentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
     }
 
     public void setUserLabel(String name) {
@@ -35,6 +40,22 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void addPlantAct(ActionEvent event) {
-        
+
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("AddPlant.fxml"));
+            AnchorPane root = (AnchorPane) miCargador.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.getIcons().add(new Image("/images/icon.png"));
+            stage.setTitle("Add Plant");
+            stage.setResizable(false);
+
+            stage.setScene(scene);
+            stage.show();
+            
+        } catch (IOException ex) {
+            System.err.println(ex);
+        }
+
     }
 }
