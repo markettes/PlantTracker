@@ -6,23 +6,31 @@
 package classes;
 
 import java.io.File;
+import java.io.Serializable;
 
 /**
  *
  * @author Marcos
  */
-public class Plant {
+public class Plant implements Serializable{
+    String name;
     String owner;
     String type;
     String site;
     int watering;
     File pict;
     
-    public Plant(String ow, String ty, String si, int wat, File pic){
+    public Plant(String na, String ow, String ty, String si, int wat, File pic){
+        name = na;
         owner = ow;
         type = ty;
         site = si;
         watering = wat;
         pict = pic;
+    }
+    
+    public String toString(){
+        return "The plant " + name + " from " + owner + " that is located in " + site + " and its type is " + type + " needs a watering of "
+                + watering + "days per week.";
     }
 }

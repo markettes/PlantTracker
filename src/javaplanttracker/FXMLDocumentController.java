@@ -42,8 +42,17 @@ public class FXMLDocumentController implements Initializable {
     private void addPlantAct(ActionEvent event) {
 
         try {
+            
+            
+            
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("AddPlant.fxml"));
             AnchorPane root = (AnchorPane) miCargador.load();
+            
+            //Pass data to the next controller
+            AddPlantController usernameController = miCargador.getController();
+            usernameController.setUsername(userLabel.getText().substring(5));
+                    
+            //Shot the window
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.getIcons().add(new Image("/images/icon.png"));
